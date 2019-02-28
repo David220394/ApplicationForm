@@ -24,7 +24,7 @@ public class Education {
 	@Column(name = "LEVEL")
 	private String highestLevelAttained;
 
-
+	@OneToMany(mappedBy = "education")
 	private List<Subject> subjects;
 
 	public String getSecondarySchools() {

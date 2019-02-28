@@ -13,6 +13,10 @@ public class Subject {
 	@Column(name = "SUBJECT_NAME")
 	private String subject;
 
+	@ManyToOne
+	@JoinColumn
+	private Education education;
+
 	public long getSubjectId() {
 		return subjectId;
 	}
