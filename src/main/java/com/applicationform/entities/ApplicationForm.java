@@ -1,11 +1,9 @@
 package com.applicationform.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="APPLICATION_FORM")
@@ -35,6 +33,11 @@ public class ApplicationForm {
 
 	@Column(name = "MOBILE")
 	private String mobilePhoneNumber;
+
+	@OneToMany(mappedBy = "applicationForm")
+	@Column(name = "eId")
+	@JsonIgnore
+	private List<Education> educations;
 
 	public long getaId() {
 		return aId;
@@ -99,5 +102,13 @@ public class ApplicationForm {
 	public void setMobilePhoneNumber(String mobilePhoneNumber) {
 		this.mobilePhoneNumber = mobilePhoneNumber;
 	}
-	
+
+
+	public List<Education> getEducations() {
+		return educations;
+	}
+
+	public void setEducations(List<Education> educations) {
+		this.educations = educations;
+	}
 }

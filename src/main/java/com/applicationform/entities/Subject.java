@@ -14,7 +14,7 @@ public class Subject {
 	private String subject;
 
 	@ManyToOne
-	@JoinColumn
+	@JoinColumn(name="EDUCATION_ID")
 	private Education education;
 
 	public long getSubjectId() {
@@ -33,5 +33,11 @@ public class Subject {
 		this.subject = subject;
 	}
 
+	public Education getEducation() {
+		return education;
+	}
 
+	public void setEducation(Education education) {
+		this.education = education;
+	}
 }
