@@ -37,6 +37,7 @@ public class ApplicationFormController {
         response.setHeader("Content-disposition",
                 "attachment; filename= test.xlsx");
         try {
+            formService.generateExcelReport();
             // get your file as InputStream
             InputStream is = new FileInputStream("test.xlsx");
             // copy it to response's OutputStream

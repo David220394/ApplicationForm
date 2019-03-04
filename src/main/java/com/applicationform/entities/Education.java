@@ -32,8 +32,6 @@ public class Education {
 	private ApplicationForm applicationForm;
 
 	@OneToMany(mappedBy = "education")
-	@Column(name="Subject")
-	@JsonIgnore
 	private List<Subject> subjects = new ArrayList<>();
 
 	public long getEducationId() {

@@ -34,10 +34,17 @@ public class ApplicationForm {
 	@Column(name = "MOBILE")
 	private String mobilePhoneNumber;
 
-	@OneToMany(mappedBy = "applicationForm")
-	@Column(name = "eId")
-	@JsonIgnore
+	@OneToMany(mappedBy = "applicationForm",fetch = FetchType.EAGER)
+
 	private List<Education> educations;
+
+	@OneToMany(mappedBy = "applicationForm")
+
+	private List<TEducation> tEducations;
+
+	@OneToMany(mappedBy = "applicationForm")
+
+	private List<Job> jobs;
 
 	public long getaId() {
 		return aId;
@@ -110,5 +117,21 @@ public class ApplicationForm {
 
 	public void setEducations(List<Education> educations) {
 		this.educations = educations;
+	}
+
+	public List<TEducation> gettEducations() {
+		return tEducations;
+	}
+
+	public void settEducations(List<TEducation> tEducations) {
+		this.tEducations = tEducations;
+	}
+
+	public List<Job> getJobs() {
+		return jobs;
+	}
+
+	public void setJobs(List<Job> jobs) {
+		this.jobs = jobs;
 	}
 }

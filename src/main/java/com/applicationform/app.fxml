@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.applicationform.Controller.LoginController">
+   <children>
+      <HBox alignment="CENTER" layoutX="23.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: sans serif; -fx-font-weight: bolder; -fx-font-size: 2.4em; -fx-fill: white;" text="Total Recuitment" wrappingWidth="350.13671875" />
+            <HBox alignment="TOP_RIGHT" prefHeight="68.0" prefWidth="454.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: red; -fx-font-size: 1.3em; -fx-font-weight: bold;" text="Client">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #aeaaeae; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: red; -fx-font-size: 1.3em; -fx-font-weight: bold;" text="Login">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox layoutX="147.0" layoutY="100.0" prefHeight="200.0" prefWidth="250.0">
+         <children>
+            <HBox alignment="CENTER" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="txt_username" prefHeight="40.0" promptText="Username" style="-fx-background-color: transparent; -fx-prompt-text-fill: white;" HBox.hgrow="ALWAYS" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="txt_password" prefHeight="40.0" promptText="Password" style="-fx-background-color: transparent; -fx-prompt-text-fill: white;" HBox.hgrow="ALWAYS" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: #2f2f2fa3; -fx-background-radius: 100; -fx-text-fill: white; -fx-font-size: bolder;" text="Login">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="lbl_text" text="test" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

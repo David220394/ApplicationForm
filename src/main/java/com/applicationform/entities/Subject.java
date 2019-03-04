@@ -13,9 +13,20 @@ public class Subject {
 	@Column(name = "SUBJECT_NAME")
 	private String subject;
 
+	@Column(name = "RESULT")
+	private String result;
+
 	@ManyToOne
 	@JoinColumn(name="EDUCATION_ID")
 	private Education education;
+
+	public Subject() {
+	}
+
+	public Subject(String subject, String result) {
+		this.subject = subject;
+		this.result = result;
+	}
 
 	public long getSubjectId() {
 		return subjectId;
@@ -39,5 +50,13 @@ public class Subject {
 
 	public void setEducation(Education education) {
 		this.education = education;
+	}
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
 	}
 }
